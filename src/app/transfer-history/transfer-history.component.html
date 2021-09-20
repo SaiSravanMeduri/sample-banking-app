@@ -1,0 +1,17 @@
+
+<table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Sender</th>
+        <th scope="col">Receiver</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transfer of allTransfers">
+        <td>{{transfer.sender}}</td>
+        <td>{{transfer.receiver}}</td>
+        <td>{{transfer.amount}}</td>
+      </tr>
+    </tbody>
+  </table>

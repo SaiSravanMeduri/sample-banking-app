@@ -1,0 +1,17 @@
+<div class="container-fluid shadow-lg rounded-3 p-3 my-3" style="max-width: 756px;">
+    <form #ref="ngForm" (ngSubmit)="formSubmit(ref)">
+        <select ngModel class="form-select my-3" aria-label="Sender" name="sender">
+            <option selected>Select Sender</option>
+            <option *ngFor="let user of allusers" [value]="user.userName">{{user.userName}}</option>
+        </select>
+        <select ngModel class="form-select my-3" aria-label="Receiver" name="receiver">
+            <option selected>Select Receiver</option>
+            <option *ngFor="let user of allusers" [value]="user.userName">{{user.userName}}</option>
+        </select>
+        <div class="input-group my-3">
+            <span class="input-group-text">$</span>
+            <input ngModel type="number" class="form-control" aria-label="Amount" name="amount">
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Transfer Money</button>
+    </form>
+</div>
